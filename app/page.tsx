@@ -11,6 +11,7 @@ import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import Certifications from "./components/Certifications";
 import CustomDivider from "./components/CustomDivider";
+import DevBanner from "./components/Banner";
 
 
 export default function Home() {
@@ -23,7 +24,9 @@ export default function Home() {
     <div className="relative h-screen max-w-full">
   <div className="absolute inset-0 z-[-1] max-w-full">
     <ParticleBackground />
+
   </div>
+  <DevBanner/>
   <MyIntroAndImage />
   <AboutMe/>
   <SkillsSection/>

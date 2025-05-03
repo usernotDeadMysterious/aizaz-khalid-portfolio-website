@@ -4,12 +4,12 @@ import { Disclosure } from "@headlessui/react";
 function AboutMe() {
   return (
     <div className="p-8 pt-0 space-y-3 w-full">
-      <h2 className="text-2xl font-bold text-gray-800  ">About Me</h2>
+      <h2 className="text-2xl font-bold  ">About Me</h2>
 
       {/* Professional paragraph */}
-      <div className="space-y-3 flex flex-col rounded-lg bg-slate-200/50 p-4">
-        <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 p-3 shadow-md">
-          <p className="text-gray-900 text-justify  ">
+      <div className="space-y-3 flex flex-col rounded-lg bg-slate-200/50 dark:bg-slate-700/50 p-4">
+        <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 dark:bg-slate-700/50 p-3 shadow-md">
+          <p className="text-justify  ">
             I'm a final-year Computer Science student with a strong interest in{" "}
             <b className="text-red-700">Cybersecurity</b> and{" "}
             <b className=" text-blue-700">Web development</b>.
@@ -18,7 +18,7 @@ function AboutMe() {
 
         <Disclosure>
           {({ open }) => (
-            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 p-3 shadow-md">
+            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 dark:bg-slate-700/50 p-3 shadow-md">
               <Disclosure.Button className="flex justify-between items-center w-full text-left">
                 <span className="text-md font-semibold text-red-700">
                   In the field of cybersecurity
@@ -30,7 +30,7 @@ function AboutMe() {
 
               <Disclosure.Panel
                 static
-                className={`mt-2 text-gray-900 text-justify transition-all duration-300 ease-in-out overflow-hidden ${
+                className={`mt-2 text-justify transition-all duration-300 ease-in-out overflow-hidden ${
                   open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
@@ -49,7 +49,7 @@ function AboutMe() {
 
         <Disclosure>
           {({ open }) => (
-            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 p-3 shadow-md">
+            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 dark:bg-slate-700/50 p-3 shadow-md">
               <Disclosure.Button className="flex justify-between items-center w-full text-left">
                 <span className="text-md font-semibold text-blue-700">
                   In the field of web development
@@ -61,7 +61,7 @@ function AboutMe() {
 
               <Disclosure.Panel
                 static
-                className={`mt-2 text-gray-900 text-justify transition-all duration-300 ease-in-out overflow-hidden ${
+                className={`mt-2  text-justify transition-all duration-300 ease-in-out overflow-hidden ${
                   open ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
