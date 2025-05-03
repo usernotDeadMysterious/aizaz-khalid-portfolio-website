@@ -3,8 +3,12 @@ import { Disclosure } from "@headlessui/react";
 import { ArrowDown, ArrowUp, ChevronDown, Link } from "lucide-react";
 function SkillsSection() {
   return (
-    <div className="p-8 pt-0 space-y-3 w-full">
-      <h2 className="text-2xl font-bold ">Skills & Expertise</h2>
+    <div
+    id="skills"
+     className="p-8 pt-0 space-y-3 w-full">
+      <h2 
+      
+      className="text-2xl font-bold ">Skills & Expertise</h2>
 
       <div className="grid grid-cols-1 gap-2">
         {/* Cybersecurity Section */}

@@ -32,12 +32,14 @@ export default function App() {
     "Home",
     "Skills",
     "Projects",
+    "Certifications",
     "Contact",
     
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar onMenuOpenChange={setIsMenuOpen}
+    className="bg-slate-200/25 dark:bg-slate-950">
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -51,18 +53,24 @@ export default function App() {
 
       <NavbarContent className="hidden sm:flex gap-8" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link  href="/">
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link aria-current="page" href="#">
+        
+        <NavbarItem >
+          <Link  href="#skills">
             Skills
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link  href="#projects">
             Projects
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link  href="#certificates">
+            Certifications
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -87,11 +95,15 @@ export default function App() {
               }
               href={
                 index === 0
-                ? "#"
+                ? "/"
                 : index === 1
-                ? "#"
+                ? "#skills"
                 : index === 2
-                ? "#"
+                ? "#projects"
+                : index === 3
+                ? "#certificates"
+                : index === 4
+                ? ""
                 : "#"
               }
               size="lg"

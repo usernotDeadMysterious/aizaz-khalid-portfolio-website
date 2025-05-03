@@ -1,14 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import { Disclosure } from "@headlessui/react";
+import { Eye } from "lucide-react";
 function AboutMe() {
   return (
     <div className="p-8 pt-0 space-y-3 w-full">
       <h2 className="text-2xl font-bold  ">About Me</h2>
 
       {/* Professional paragraph */}
-      <div className="space-y-3 flex flex-col rounded-lg bg-slate-200/50 dark:bg-slate-700/50 p-4">
-        <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 dark:bg-slate-700/50 p-3 shadow-md">
+      <div className="space-y-3 flex flex-col rounded-lg bg-slate-200/50 dark:bg-slate-700/20 p-4">
+        <div className="w-full rounded-lg border border-gray-300 bg-slate-200/20 dark:bg-slate-700/10 p-3 shadow-md">
           <p className="text-justify  ">
             I'm a final-year Computer Science student with a strong interest in{" "}
             <b className="text-red-700">Cybersecurity</b> and{" "}
@@ -18,12 +19,12 @@ function AboutMe() {
 
         <Disclosure>
           {({ open }) => (
-            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 dark:bg-slate-700/50 p-3 shadow-md">
+            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 dark:bg-slate-700/10 p-3 shadow-md">
               <Disclosure.Button className="flex justify-between items-center w-full text-left">
                 <span className="text-md font-semibold text-red-700">
                   In the field of cybersecurity
                 </span>
-                <span className="text-sm text-blue-600">
+                <span className="text-xs text-blue-600">
                   {open ? "Hide Details" : "View Details"}
                 </span>
               </Disclosure.Button>
@@ -49,12 +50,12 @@ function AboutMe() {
 
         <Disclosure>
           {({ open }) => (
-            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 dark:bg-slate-700/50 p-3 shadow-md">
+            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 dark:bg-slate-700/10 p-3 shadow-md">
               <Disclosure.Button className="flex justify-between items-center w-full text-left">
                 <span className="text-md font-semibold text-blue-700">
                   In the field of web development
                 </span>
-                <span className="text-sm text-blue-600">
+                <span className="text-xs text-blue-600">
                   {open ? "Hide Details" : "View Details"}
                 </span>
               </Disclosure.Button>
@@ -217,7 +218,13 @@ function AboutMe() {
               />
             </div>
           </a>
+          
         </div>
+        <a 
+        title="View Certificates"
+        href="#certificates">
+        <h3 className="text-sm mb-2 mt-2">Click to view certificates <Eye className="h-4 w-4 inline text-red-600"/></h3>
+        </a>
       </div>
     </div>
   );

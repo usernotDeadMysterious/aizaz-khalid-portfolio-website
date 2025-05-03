@@ -6,46 +6,60 @@ import { Button } from '@heroui/react'
 
 // Certificate data array
 const certificates = [
-  {
-    id: 1,
-    logo: '/google-logo.svg',
-    alt: 'Google Logo',
-    title: 'Google Cybersecurity Certificate',
-    verifyLink: 'https://www.coursera.org/account/accomplishments/professional-cert/F7OTKYDDE70X',
-    sourcefile: '/gcc.png'
-  },
+    {
+        id: 1,
+        logo: '/meta-logo.svg',
+        alt: 'Meta Logo',
+        title: 'Meta Front-End Developer Certificate',
+        verifyLink: 'https://www.coursera.org/account/accomplishments/professional-cert/8OKXO059EAUP',
+        sourcefile: '/meta-cert.png'
+      },
   {
     id: 2,
-    logo: '/ec-council-colored.svg',
-    alt: 'EC-Council Logo',
-    title: 'Ethical Hacking Essentials',
-    verifyLink: 'https://github.com/usernotDeadMysterious/ec-council/blob/main/EHE%20Certificate.png',
-    sourcefile: '/ehe.png'
+    logo: '/meta-logo.svg',
+    alt: 'Meta Logo',
+    title: 'Advanced React',
+    verifyLink: 'https://www.coursera.org/account/accomplishments/verify/1X2D3C662BCQ',
+    sourcefile: '/meta/advanced-react.png'
   },
   {
     id: 3,
-    logo: '/ec-council-colored.svg',
-    alt: 'EC-Council Logo',
-    title: 'Network Defense Essentials',
-    verifyLink: 'https://github.com/usernotDeadMysterious/ec-council/blob/main/NDE%20certificate.png',
-    sourcefile: '/nde.png'
+    logo: '/meta-logo.svg',
+    alt: 'Meta Logo',
+    title: 'HTML CSS in Depth',
+    verifyLink: 'https://www.coursera.org/account/accomplishments/verify/3CSWTGI4MAQF',
+    sourcefile: '/meta/htmlcss.png'
   },
   {
     id: 4,
-    logo: '/ec-council-colored.svg',
-    alt: 'EC-Council Logo',
-    title: 'Intro to Anonymity,Dark web & Cryptocurrency',
-    verifyLink: 'https://github.com/usernotDeadMysterious/ec-council/blob/main/Intro%20to%20anonymity%2C%20darkweb.png',
-    sourcefile: '/darkweb.png'
+    logo: '/meta-logo.svg',
+    alt: 'Meta Logo',
+    title: 'Programming with JavaScript',
+    verifyLink: 'https://www.coursera.org/account/accomplishments/verify/5RFH1K7WR0QS',
+    sourcefile: '/meta/javascript.png'
   },
-  
-  
+  {
+    id: 5,
+    logo: '/meta-logo.svg',
+    alt: 'Meta Logo',
+    title: 'UI/UX Principles',
+    verifyLink: 'https://www.coursera.org/account/accomplishments/verify/5Z6XR2LA1LLI',
+    sourcefile: '/meta/uiux.png'
+  },
+  {
+    id: 6,
+    logo: '/meta-logo.svg',
+    alt: 'Meta Logo',
+    title: 'Version Control',
+    verifyLink: 'https://www.coursera.org/account/accomplishments/verify/WKILWTA80R71',
+    sourcefile: '/meta/version-control.png'
+  },
   // Add more certs as needed
 ]
 
-function CertTemplateCS() {
+function CertTemplateWD() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2  gap-6 ">
+    <div className="grid grid-cols-1 sm:grid-cols-2  gap-6">
       {certificates.map((cert) => (
         <div
           key={cert.id}
@@ -87,4 +101,4 @@ function CertTemplateCS() {
   )
 }
 
-export default CertTemplateCS
+export default CertTemplateWD

@@ -62,7 +62,7 @@ function MyIntroAndImage() {
       <div className="flex flex-col items-center justify-center ">
         {/* Typing H1 */}
         <motion.h1
-          className="text-4xl font-bold mb-4 border border-gray-300 bg-slate-200/50 dark:bg-slate-700/50 rounded-lg p-2"
+          className="text-4xl font-bold mb-4  p-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -78,7 +78,7 @@ function MyIntroAndImage() {
         {/* Typing and Looping H2 */}
         {showH2 && (
           <motion.h2
-            className="text-2xl text-blue-600 font-semibold mb-4 border border-gray-300 bg-slate-200/50 dark:bg-slate-700/50 rounded-lg p-2"
+            className="text-2xl text-blue-600 font-semibold mb-4  p-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -102,7 +102,7 @@ function MyIntroAndImage() {
         {/* Paragraph fade-in */}
         {showP && (
           <motion.p
-            className="text-lg text-justify text-gray-600 dark:text-slate-200 mb-6 border border-gray-300 bg-slate-200/50 shadow-md dark:bg-slate-700/50 rounded-lg p-2"
+            className="text-lg text-justify text-gray-600 dark:text-slate-200 mb-6 border border-gray-300 bg-slate-200/50 shadow-md dark:bg-slate-700/20 rounded-lg p-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -116,7 +116,7 @@ function MyIntroAndImage() {
         {/* Social Links fade-in */}
         {showSocial && (
           <motion.div
-            className="flex flex-row gap-8 border border-gray-300 bg-slate-200/50 dark:bg-slate-700/50 rounded-lg p-2"
+            className="flex flex-row gap-8 border border-gray-300 bg-slate-200/50 dark:bg-slate-700/20 rounded-lg p-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -126,7 +126,7 @@ function MyIntroAndImage() {
               target="_blank"
             >
               <div className="flex flex-col items-center justify-center hover:border-1  rounded-lg p-2">
-                <Github className="w-6 h-7 " color="black" />
+                <Github className="w-6 h-7 text-black dark:text-white"  />
                 <h6 className="text-xs  hover:text-black-900">
                   Github
                 </h6>
