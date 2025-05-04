@@ -8,7 +8,7 @@ import CertTemplatePR from './CertTemplatePR';
 import CertTemplateOther from './CertTemplateOther';
 import Workshops from './Workshops';
 
-function CustomDivider() {
+function CertificatesSection() {
   const [activeTab, setActiveTab] = useState('cybersecurity');
 
   return (
@@ -91,4 +91,4 @@ function CustomDivider() {
   );
 }
 
-export default CustomDivider;
+export default CertificatesSection;

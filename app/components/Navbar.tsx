@@ -79,7 +79,7 @@ export default function App() {
           <ThemeToggle/>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="light"
+          <Button as={Link} color="primary" href="#contact" variant="light"
                     >
             Contact
           </Button>
@@ -104,7 +104,7 @@ export default function App() {
                 : index === 3
                 ? "#certificates"
                 : index === 4
-                ? ""
+                ? "#contact"
                 : "#"
               }
               size="lg"

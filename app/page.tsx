@@ -1,14 +1,15 @@
 "use client";
 import { Button, ButtonGroup } from "@heroui/react";
-
 import MyIntroAndImage from "./components/MyIntroAndImage";
 import ParticleBackground from "./components/ParticleBackground";
 import AboutMe from "./components/AboutMe";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
-import Certifications from "./components/Certifications";
-import CustomDivider from "./components/CustomDivider";
 import DevBanner from "./components/Banner";
+import Footer from "./components/Footer";
+import CertificatesSection from "./components/CertificatesSection";
+import Contact from "./components/Contact";
+import Feedback from './components/Feeback'
 
 export default function Home() {
   return (
@@ -27,7 +28,10 @@ export default function Home() {
             <AboutMe />
             <SkillsSection />
             <ProjectsSection />
-            <CustomDivider />
+            <CertificatesSection />
+            <Contact/>
+            <Feedback/>
+            <Footer/>
           </div>
         </div>
       </div>
