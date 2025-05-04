@@ -54,7 +54,7 @@ function ProjectsSection() {
       </p>
       <div className="flex gap-3 mt-3">
         <a
-          href="https://aizaz-portfolio.com"
+          href="https://aizaz-khalid-portfolio-website.vercel.app"
           target="_blank"
           rel='noopener noreferrer'
           className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600"
@@ -63,7 +63,7 @@ function ProjectsSection() {
         </a>
         <a 
          
-          href="https://github.com/username/portfolio-site"
+          href="https://github.com/usernotDeadMysterious/aizaz-khalid-portfolio-website"
           target="_blank"
           rel='noopener noreferrer'
           className="px-3 py-1 border border-blue-500 text-blue-600 rounded hover:bg-blue-100"

@@ -8,50 +8,58 @@ import { Button } from '@heroui/react'
 const certificates = [
   {
     id: 1,
-    logo: '/google-logo.svg',
-    alt: 'Google Logo',
-    title: 'Google Cybersecurity Certificate',
-    verifyLink: 'https://www.coursera.org/account/accomplishments/professional-cert/F7OTKYDDE70X',
-    sourcefile: '/gcc.png'
+    logo: '/digiskills.png',
+    alt: 'DigiSkills Logo',
+    title: 'Digital Marketing',
+    verifyLink: 'https://github.com/usernotDeadMysterious/my-certificates/blob/main/digital-marketing.png',
+    sourcefile: '/other/digital-marketing.png'
   },
   {
     id: 2,
-    logo: '/ec-council-colored.svg',
-    alt: 'EC-Council Logo',
-    title: 'Ethical Hacking Essentials',
-    verifyLink: 'https://github.com/usernotDeadMysterious/ec-council/blob/main/EHE%20Certificate.png',
-    sourcefile: '/ehe.png'
+    logo: '/digiskills.png',
+    alt: 'DigiSkills Logo',
+    title: 'Freelancing',
+    verifyLink: 'https://github.com/usernotDeadMysterious/my-certificates/blob/main/freelancing.png',
+    sourcefile: '/other/freelancing.png'
   },
   {
     id: 3,
-    logo: '/ec-council-colored.svg',
-    alt: 'EC-Council Logo',
-    title: 'Network Defense Essentials',
-    verifyLink: 'https://github.com/usernotDeadMysterious/ec-council/blob/main/NDE%20certificate.png',
-    sourcefile: '/nde.png'
+    logo: '/mathworks.svg',
+    alt: 'Math works Logo',
+    title: 'Image Processing Matlab',
+    verifyLink: 'https://github.com/usernotDeadMysterious/my-certificates/blob/main/image-processing.png',
+    sourcefile: '/other/image-processing.png'
   },
   {
     id: 4,
-    logo: '/ec-council-colored.svg',
-    alt: 'EC-Council Logo',
-    title: 'Intro to Anonymity,Dark web & Cryptocurrency',
-    verifyLink: 'https://github.com/usernotDeadMysterious/ec-council/blob/main/Intro%20to%20anonymity%2C%20darkweb.png',
-    sourcefile: '/darkweb.png'
+    logo: '/mathworks.svg',
+    alt: 'Math works Logo',
+    title: 'Matlab Onramp',
+    verifyLink: 'https://github.com/usernotDeadMysterious/my-certificates/blob/main/matlab.png',
+    sourcefile: '/other/matlab.png'
   },
   {
     id: 5,
-    logo: '/pm-youth.png',
-    alt: 'Prime Minister\'s Youth Program Program Pakistan Logo',
-    title: 'Digital Forensics & Cyber Security',
-    verifyLink: 'https://github.com/usernotDeadMysterious/my-certificates/blob/main/DFCS.jpg',
-    sourcefile: '/DFCS.jpg'
+    logo: '/digiskills.png',
+    alt: 'DigiSkills Logo',
+    title: 'Search Engine Optimization',
+    verifyLink: 'https://github.com/usernotDeadMysterious/my-certificates/blob/main/seo.png',
+    sourcefile: '/other/seo.png'
+  },
+  {
+    id: 6,
+    logo: '/digiskills.png',
+    alt: 'DigiSkills Logo',
+    title: 'Wordpress',
+    verifyLink: 'https://github.com/usernotDeadMysterious/my-certificates/blob/main/wordpress.png',
+    sourcefile: '/other/wordpress.png'
   },
   
   
   // Add more certs as needed
 ]
 
-function CertTemplateCS() {
+function CertTemplateOther() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2  gap-6 ">
       {certificates.map((cert) => (
@@ -95,4 +103,4 @@ function CertTemplateCS() {
   )
 }
 
-export default CertTemplateCS
+export default CertTemplateOther

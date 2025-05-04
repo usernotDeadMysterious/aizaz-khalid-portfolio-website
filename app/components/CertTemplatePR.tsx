@@ -8,50 +8,42 @@ import { Button } from '@heroui/react'
 const certificates = [
   {
     id: 1,
-    logo: '/google-logo.svg',
-    alt: 'Google Logo',
-    title: 'Google Cybersecurity Certificate',
-    verifyLink: 'https://www.coursera.org/account/accomplishments/professional-cert/F7OTKYDDE70X',
-    sourcefile: '/gcc.png'
+    logo: '/Sololearn.svg',
+    alt: 'Solo Learn Logo',
+    title: 'Introduction to Python ',
+    verifyLink: 'https://www.sololearn.com/certificates/CC-Z3SJOL8P',
+    sourcefile: '/sololearn/intro-python.png'
   },
   {
     id: 2,
-    logo: '/ec-council-colored.svg',
-    alt: 'EC-Council Logo',
-    title: 'Ethical Hacking Essentials',
-    verifyLink: 'https://github.com/usernotDeadMysterious/ec-council/blob/main/EHE%20Certificate.png',
-    sourcefile: '/ehe.png'
+    logo: '/Sololearn.svg',
+    alt: 'Solo Learn Logo',
+    title: 'Python Intermediate',
+    verifyLink: 'https://www.sololearn.com/certificates/CC-YCMFLRCN',
+    sourcefile: '/sololearn/python.png'
   },
   {
     id: 3,
-    logo: '/ec-council-colored.svg',
-    alt: 'EC-Council Logo',
-    title: 'Network Defense Essentials',
-    verifyLink: 'https://github.com/usernotDeadMysterious/ec-council/blob/main/NDE%20certificate.png',
-    sourcefile: '/nde.png'
+    logo: '/Sololearn.svg',
+    alt: 'Solo Learn Logo',
+    title: 'Introduction to JavaScript',
+    verifyLink: 'https://www.sololearn.com/certificates/CC-YR2DJLIQ',
+    sourcefile: '/sololearn/intro-JS.png'
   },
   {
     id: 4,
-    logo: '/ec-council-colored.svg',
-    alt: 'EC-Council Logo',
-    title: 'Intro to Anonymity,Dark web & Cryptocurrency',
-    verifyLink: 'https://github.com/usernotDeadMysterious/ec-council/blob/main/Intro%20to%20anonymity%2C%20darkweb.png',
-    sourcefile: '/darkweb.png'
-  },
-  {
-    id: 5,
-    logo: '/pm-youth.png',
-    alt: 'Prime Minister\'s Youth Program Program Pakistan Logo',
-    title: 'Digital Forensics & Cyber Security',
-    verifyLink: 'https://github.com/usernotDeadMysterious/my-certificates/blob/main/DFCS.jpg',
-    sourcefile: '/DFCS.jpg'
+    logo: '/Sololearn.svg',
+    alt: 'Solo Learn Logo',
+    title: 'JavaScript Intermediate',
+    verifyLink: 'https://www.sololearn.com/certificates/CC-KLB7XIGM',
+    sourcefile: '/sololearn/JS.png'
   },
   
   
   // Add more certs as needed
 ]
 
-function CertTemplateCS() {
+function CertTemplatePR() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2  gap-6 ">
       {certificates.map((cert) => (
@@ -95,4 +87,4 @@ function CertTemplateCS() {
   )
 }
 
-export default CertTemplateCS
+export default CertTemplatePR

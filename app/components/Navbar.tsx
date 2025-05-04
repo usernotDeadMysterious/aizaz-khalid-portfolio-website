@@ -79,7 +79,8 @@ export default function App() {
           <ThemeToggle/>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="light">
+          <Button as={Link} color="primary" href="#" variant="light"
+                    >
             Contact
           </Button>
         </NavbarItem>

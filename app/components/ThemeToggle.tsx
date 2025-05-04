@@ -17,8 +17,10 @@ export default function ThemeToggle() {
   return (
     <Button
         variant="light"
+        color="danger"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="p-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+      
+      className="p-1 transition"
     >
       {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
     </Button>
