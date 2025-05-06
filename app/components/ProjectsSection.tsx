@@ -7,7 +7,7 @@ function ProjectsSection() {
     className="p-8 pt-0 space-y-3 w-full">
         <h2 
         
-        className="text-2xl font-bold text-gray-800">Projects</h2>
+        className="text-2xl font-bold ">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {/* FYP - Real Estate Platform */}
     <div className="rounded-lg border border-gray-300 dark:bg-gray-100/10 shadow-md p-4">

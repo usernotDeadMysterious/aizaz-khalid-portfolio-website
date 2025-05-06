@@ -10,7 +10,7 @@ function Contact() {
   
   return (
     <div id="contact" className="p-8 pt-0 space-y-6 w-full">
-      <h2 className="text-2xl font-bold">Contact</h2>
+      <h2 className="text-2xl font-bold">Contact Me</h2>
       <Divider className="my-4" />
 
       {/* Contact Form Disclosure */}

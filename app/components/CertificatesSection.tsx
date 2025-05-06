@@ -75,7 +75,7 @@ function CertificatesSection() {
           onClick={() => setActiveTab('workshops')}
           
         >
-          Cybersecurity Workshops
+          Workshops
         </Button>
       </div>
 

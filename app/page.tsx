@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import CertificatesSection from "./components/CertificatesSection";
 import Contact from "./components/Contact";
 import Feedback from './components/Feeback'
+import FeedbackTwo from "./components/FeedbackTwo";
 
 export default function Home() {
   return (
@@ -30,7 +31,8 @@ export default function Home() {
             <ProjectsSection />
             <CertificatesSection />
             <Contact/>
-            <Feedback/>
+            {/* <Feedback/> */}
+            <FeedbackTwo/>
             <Footer/>
           </div>
         </div>

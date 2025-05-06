@@ -10,7 +10,7 @@ function AboutMe() {
       {/* Professional paragraph */}
       <div className="space-y-3 flex flex-col rounded-lg bg-slate-200/50 dark:bg-slate-700/20 p-4">
         <div className="w-full rounded-lg border border-gray-300 bg-slate-200/20 dark:bg-slate-700/10 p-3 shadow-md">
-          <p className="text-justify  ">
+          <p className="  ">
             I'm a final-year Computer Science student with a strong interest in{" "}
             <b className="text-red-700">Cybersecurity</b> and{" "}
             <b className=" text-blue-700">Web development</b>.
