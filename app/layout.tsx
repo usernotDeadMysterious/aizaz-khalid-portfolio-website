@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aizaz Khalid Portfolio",
-  description: "Computer Science graduate, full-stack developer, cybersecurity analyst, and AI enthusiast. Explore my portfolio of projects, skills, and experience.",
+  title: "Aizaz Khalid - Cybersecurity Analyst - Full Stack Developer ",
+  description: "Computer Science undergraduate, full-stack developer, cybersecurity analyst, and AI enthusiast. Explore my portfolio of projects, skills, and experience.",
   icons: {
     icon: [
       { url: "/my-favicon/favicon.ico", sizes: "any" },
