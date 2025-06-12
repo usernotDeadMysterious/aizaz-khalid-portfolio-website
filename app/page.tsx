@@ -11,10 +11,25 @@ import CertificatesSection from "./components/CertificatesSection";
 import Contact from "./components/Contact";
 import Feedback from './components/Feeback'
 import FeedbackTwo from "./components/FeedbackTwo";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <>
+    {/* Google Analytics Script */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-6BXRP55Z4E"
+        strategy="afterInteractive"
+      />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-6BXRP55Z4E');
+        `}
+      </Script>
       <div className="relative h-full w-full">
         {/* Background animation */}
         <div className="absolute inset-0 z-[-1]">
