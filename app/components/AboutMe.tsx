@@ -8,20 +8,20 @@ function AboutMe() {
       <h2 className="text-2xl font-bold  ">About Me</h2>
 
       {/* Professional paragraph */}
-      <div className="space-y-3 flex flex-col rounded-lg bg-slate-200/50 dark:bg-slate-700/20 p-4">
-        <div className="w-full rounded-lg border border-gray-300 bg-slate-200/20 dark:bg-slate-700/10 p-3 shadow-md">
-          <p className="  ">
+      <div className="space-y-3 flex flex-col rounded-lg bg-slate-200/10 dark:bg-slate-700/20 p-4">
+        <div className="w-full rounded-lg border border-gray-300 bg-slate-200/10 dark:bg-slate-700/10 p-3 shadow-md">
+          <p className="text-sm  ">
             I'm a final-year Computer Science student with a strong interest in{" "}
-            <b className="text-red-700">Cybersecurity</b> and{" "}
-            <b className=" text-blue-700">Web development</b>.
+            <b className="text-red-700 text-sm">Cybersecurity</b> and{" "}
+            <b className=" text-blue-700 text-sm">Web development</b>.
           </p>
         </div>
 
         <Disclosure>
           {({ open }) => (
-            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 dark:bg-slate-700/10 p-3 shadow-md">
+            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/10 dark:bg-slate-700/10 p-3 shadow-md">
               <Disclosure.Button className="flex justify-between items-center w-full text-left">
-                <span className="text-md font-semibold text-red-700">
+                <span className=" font-semibold text-red-700 text-sm hover:text-md">
                   In the field of cybersecurity
                 </span>
                 <span className="text-xs text-blue-600">
@@ -50,9 +50,9 @@ function AboutMe() {
 
         <Disclosure>
           {({ open }) => (
-            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/50 dark:bg-slate-700/10 p-3 shadow-md">
+            <div className="w-full rounded-lg border border-gray-300 bg-slate-200/10 dark:bg-slate-700/10 p-3 shadow-md">
               <Disclosure.Button className="flex justify-between items-center w-full text-left">
-                <span className="text-md font-semibold text-blue-700">
+                <span className="text-sm font-semibold text-blue-700">
                   In the field of web development
                 </span>
                 <span className="text-xs text-blue-600">

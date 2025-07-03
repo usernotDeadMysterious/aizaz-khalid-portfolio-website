@@ -12,6 +12,8 @@ import Contact from "./components/Contact";
 import Feedback from './components/Feeback'
 import FeedbackTwo from "./components/FeedbackTwo";
 import Script from "next/script";
+import ChatWidget from "./components/ChatWidget";
+
 
 export default function Home() {
   return (
@@ -32,22 +34,27 @@ export default function Home() {
       </Script>
       <div className="relative h-full w-full">
         {/* Background animation */}
-        <div className="absolute inset-0 z-[-1]">
+        <div className="absolute inset-0 z-[0]">
           <ParticleBackground />
         </div>
 
         {/* Content Container with Glass Effect */}
         <div className="relative z-10 mx-auto max-w-7xl  ">
           <div className="rounded-2xl bg-white/10 dark:bg-black/5 backdrop-blur-xs shadow-lg p-2 md:p-3 space-y-6">
+            {/* <AnimationNav/> */}
             <DevBanner />
+
             <MyIntroAndImage />
+            
             <AboutMe />
             <SkillsSection />
             <ProjectsSection />
             <CertificatesSection />
             <Contact/>
-            {/* <Feedback/> */}
+            
             <FeedbackTwo/>
+            
+            {/* <ChatWidget/> */}
             <Footer/>
           </div>
         </div>

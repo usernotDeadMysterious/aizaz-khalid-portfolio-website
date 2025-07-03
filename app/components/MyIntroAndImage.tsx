@@ -3,13 +3,19 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Download, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import CustomPopover from "./CustomPopover";
+import ZoomableImage from "../_componentsNew/ZomableImage";
+import CVModal from "../_componentsNew/CVModal";
 function MyIntroAndImage() {
   const [showH2, setShowH2] = useState(false);
   const [showP, setShowP] = useState(false);
   const [showSocial, setShowSocial] = useState(false);
+
+function viewCV(){
+
+}
 
   useEffect(() => {
     // Timing based on typing speed * length of h1 text
@@ -34,29 +40,24 @@ function MyIntroAndImage() {
   }, []);
 
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 items-center justify-items-center w-full max-w-screen-xl mx-auto gap-3 p-5  ">
-
-      
+    <div className="grid sm:grid-cols-1 md:grid-cols-1 items-center justify-items-center w-full max-w-screen-xl mx-auto gap-3 p-5  ">
       {/* Image Section */}
-<div className="relative flex items-center justify-center w-[250px] h-[250px]">
-  {/* Rotating colorful border - behind everything */}
-  <div className="absolute w-full h-full rounded-full animate-spin-slow bg-gradient-to-r from-pink-500 via-blue-500 to-purple-500"></div>
+      <div className="relative flex items-center justify-center w-[250px] h-[250px]">
+        {/* Rotating colorful border - behind everything */}
+        <div className="absolute w-full h-full rounded-full animate-spin-slow bg-gradient-to-r from-red-500 visa-blue-500 to-purple-500"></div>
 
-  {/* White inner circle with image (static) */}
-  <div className="relative z-10 w-[240px] h-[240px] bg-white rounded-full flex items-center justify-center overflow-hidden">
-    <Image
+        {/* White inner circle with image (static) */}
+        <div className="relative z-10 w-[240px] h-[240px] bg-white rounded-full flex items-center justify-center overflow-hidden">
+          {/* <Image
       alt="Aizaz Khalid Image"
       src="/my pic.png"
       width={230}
       height={230}
       className="object-cover rounded-full"
-    />
-  </div>
-</div>
-
-
-
-
+    /> */}
+          <ZoomableImage />
+        </div>
+      </div>
 
       {/* Intro Section  */}
       <div className="flex flex-col items-center justify-center ">
@@ -102,21 +103,20 @@ function MyIntroAndImage() {
         {/* Paragraph fade-in */}
         {showP && (
           <motion.p
-            className="text-lg text-justify text-gray-600 dark:text-slate-200 mb-6 border border-gray-300 bg-slate-200/50 shadow-md dark:bg-slate-700/20 rounded-lg p-2"
+            className="text-md text-justify text-gray-800 dark:text-slate-200 mb-6 border border-gray-300 bg-slate-200/10 shadow-md dark:bg-slate-700/20 rounded-lg p-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            Computer Science undergraduate at Agriculture University Peshawar.
-            Google Certified Cybersecurity Analyst and Meta Certified Front-End
-            Developer.
+            Computer Science Graduate from  University of Agriculture Peshawar. Cyber Security Analyst ~ SOC L1 ~ 
+            Full Stack Software Engineer - Meta
           </motion.p>
         )}
 
         {/* Social Links fade-in */}
         {showSocial && (
           <motion.div
-            className="flex flex-row gap-8 border border-gray-300 bg-slate-200/50 dark:bg-slate-700/20 rounded-lg p-2"
+            className="flex flex-row gap-8 border border-gray-300 bg-slate-200/10 dark:bg-slate-700/20 rounded-lg p-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -126,25 +126,20 @@ function MyIntroAndImage() {
               target="_blank"
             >
               <div className="flex flex-col items-center justify-center hover:border-1  rounded-lg p-2">
-                <Github className="w-6 h-7 text-black dark:text-white"  />
-                <h6 className="text-xs  hover:text-black-900">
-                  Github
-                </h6>
+                <Github className="w-6 h-7 text-black dark:text-white" />
+                <h6 className="text-xs  hover:text-black-900">Github</h6>
               </div>
             </Link>
 
-            
             <Link
               href="https://www.instagram.com/sta___lewane?igsh=MW51ZzA2aml0dGZnbw=="
               target="_blank"
             >
               <div className="flex flex-col items-center justify-center hover:border-1 rounded-lg p-2">
                 <Instagram className="w-6 h-7" color="Red" />
-                <h6 className="text-xs hover:text-red-900">
-                  Instagram
-                </h6>
+                <h6 className="text-xs hover:text-red-900">Instagram</h6>
               </div>
-              </Link>
+            </Link>
             <Link
               href="https://www.linkedin.com/in/aizaz-khalid-a0864425a/"
               target="_blank"
@@ -154,6 +149,13 @@ function MyIntroAndImage() {
                 <h6 className="text-xs hover:text-blue-900">LinkedIn</h6>
               </div>
             </Link>
+            <div 
+            onClick={viewCV}
+            className="flex flex-col items-center justify-center hover:border-1  rounded-lg p-2">
+                {/* <Download className="w-6 h-7 text-black dark:text-white" /> */}
+                
+                <CVModal  />
+              </div>
           </motion.div>
         )}
       </div>

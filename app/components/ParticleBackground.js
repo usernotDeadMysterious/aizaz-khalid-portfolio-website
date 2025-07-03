@@ -1,7 +1,8 @@
 // components/ParticleBackground.js
+'use client'
 import { useEffect } from 'react';
 
-const ParticleBackground = () => {
+const ParticleBackground = ({ fixed = true }) => {
   useEffect(() => {
     const canvas = document.getElementById('background-canvas');
     const ctx = canvas.getContext('2d');
@@ -9,15 +10,15 @@ const ParticleBackground = () => {
     canvas.height = window.innerHeight;
 
     const particles = [];
-    const numParticles = 100;
-    const maxDistance = 120;
+    const numParticles = 120;
+    const maxDistance = 75;
 
     class Particle {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 1.2;
-        this.vy = (Math.random() - 0.5) * 1.2;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
         this.radius = 2;
       }
 
@@ -32,6 +33,7 @@ const ParticleBackground = () => {
       draw() {
         ctx.beginPath();
         ctx.fillStyle = '#fa321b'; // sky blue
+        // ctx.fillStyle = '#000000'; // sky blue
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fill();
       }
@@ -50,7 +52,11 @@ const ParticleBackground = () => {
 
           if (dist < maxDistance) {
             ctx.beginPath();
-            ctx.strokeStyle = 'rgba(243, 126, 112, 0.1)';
+            // ctx.strokeStyle = 'rgba(243, 126, 112, 0.1)';
+            // ctx.strokeStyle = 'rgba(67, 255, 100, 0.85)'; //green
+            // ctx.strokeStyle = 'rgba(255, 73, 124, 1)'; //pinkinsh red
+            ctx.strokeStyle = 'rgba(255, 73, 124, 0.55)'; //ligh pink
+
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -84,7 +90,13 @@ const ParticleBackground = () => {
     };
   }, []);
 
-  return <canvas id="background-canvas" className="fixed top-0 left-0 w-screen h-screen -z-10"></canvas>;
+  return (
+  // <canvas id="background-canvas" className="fixed top-0 left-0 w-screen h-screen -z-10"></canvas>
+   <canvas
+      id="background-canvas"
+      className={`${fixed ? 'fixed' : 'absolute'} top-0 left-0 w-full h-full -z-10 pointer-events-none`}
+    />
+);
 };
 
 export default ParticleBackground;
