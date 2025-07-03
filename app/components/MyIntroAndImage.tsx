@@ -40,7 +40,7 @@ function viewCV(){
   }, []);
 
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-1 items-center justify-items-center w-full max-w-screen-xl mx-auto gap-3 p-5  ">
+    <div className="grid sm:grid-cols-1 md:grid-cols-2 items-center justify-items-center w-full max-w-screen-xl mx-auto gap-3 p-5  ">
       {/* Image Section */}
       <div className="relative flex items-center justify-center w-[250px] h-[250px]">
         {/* Rotating colorful border - behind everything */}
