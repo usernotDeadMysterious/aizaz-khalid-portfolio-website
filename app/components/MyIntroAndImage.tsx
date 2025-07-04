@@ -26,11 +26,11 @@ function viewCV(){
 
     const timeout2 = setTimeout(() => {
       setShowP(true);
-    }, h1TypingTime + 4000); // a bit later after h2 starts
+    }, h1TypingTime + 2000); // a bit later after h2 starts
 
     const timeout3 = setTimeout(() => {
       setShowSocial(true); // Show social media links after the paragraph
-    }, h1TypingTime + 6000); // Adjust timing if necessary
+    }, h1TypingTime + 3000); // Adjust timing if necessary
 
     return () => {
       clearTimeout(timeout1);
