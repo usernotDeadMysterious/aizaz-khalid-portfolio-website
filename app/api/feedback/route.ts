@@ -1,6 +1,6 @@
 // app/api/feedback/route.ts
 import { NextResponse } from 'next/server';
-import { supabase } from '@/app/lib/Supabase';
+import { supabase } from '@/lib/Supabase';
 
 export async function POST(req: Request) {
   const { name, email, feedback } = await req.json();

@@ -1,7 +1,7 @@
 // app/api/service-request/route.ts ✅ FIXED
 
 import { NextResponse } from 'next/server';
-import { supabase } from '@/app/lib/Supabase';
+import { supabase } from '@/lib/Supabase';
 
 export async function POST(request: Request) {
   const body = await request.json();
