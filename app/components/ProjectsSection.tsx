@@ -1,3 +1,4 @@
+import { FileWarning, LucideMessageCircleWarning } from 'lucide-react'
 import React from 'react'
 
 function ProjectsSection() {
@@ -76,15 +77,21 @@ function ProjectsSection() {
 
    {/* Example Project 3  */}
     
-    {/* <div className="rounded-lg border border-gray-300 bg-white shadow-md p-4">
-      <img
-        src="/images/chat-app.png"
-        alt="Chat App"
-        className="rounded-md mb-3 w-full h-40 object-cover"
-      />
-      <h3 className="text-xl font-semibold text-purple-600">Real-Time Chat App</h3>
+    <div className="rounded-lg border border-gray-300 bg-white shadow-md p-4">
+     
+      <video
+      src={'https://xvtmkouugfhjglzaqfkp.supabase.co/storage/v1/object/public/mystorage//2025-07-03%2017-16-12.mkv'}
+      autoPlay
+      controls 
+      muted
+      
+      className="rounded-md mb-3 w-full h-40 object-cover"
+      >
+
+      </video>
+      <h3 className="text-xl font-semibold text-purple-600">CyberLock Simulator: Teaching the Impact of Ransomware</h3>
       <p className="text-gray-700 text-sm mt-1">
-        A Firebase-based real-time chat app with user auth and private channels using React and Firestore.
+        <LucideMessageCircleWarning className='h-5 w-5 inline'/>This Project was build purely for educational purpose and tested in a controlled enviroment, The Developer will not be held responsible for any misuse of the video or code.   
       </p>
       <div className="flex gap-3 mt-3">
         <a
@@ -104,7 +111,7 @@ function ProjectsSection() {
           GitHub Repo
         </a>
       </div>
-    </div> */}
+    </div>
 
     {/* Placeholder Card for Upcoming Projects */}
 <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50/10 shadow-inner p-4 flex flex-col items-center justify-center text-center">
