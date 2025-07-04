@@ -11,7 +11,7 @@ function AboutMe() {
       <div className="space-y-3 flex flex-col rounded-lg bg-slate-200/10 dark:bg-slate-700/20 p-4">
         <div className="w-full rounded-lg border border-gray-300 bg-slate-200/10 dark:bg-slate-700/10 p-3 shadow-md">
           <p className="text-sm  ">
-            I'm a final-year Computer Science student with a strong interest in{" "}
+            I'm a Computer Science Graduate from University of Agriculture Peshawar with a strong interest in{" "}
             <b className="text-red-700 text-sm">Cybersecurity</b> and{" "}
             <b className=" text-blue-700 text-sm">Web development</b>.
           </p>

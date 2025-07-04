@@ -19,8 +19,8 @@ export default function ZoomableImage() {
       />
 
       <Dialog as={Fragment} open={isOpen} onClose={() => setIsOpen(false)}>
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-          <Dialog.Panel className="relative max-w-4xl w-full p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 ">
+          <Dialog.Panel className="relative max-w-4xl w-full p-4 items-center flex justify-center transition-transform duration-300 ease-out scale-100 opacity-100 ">
             <Image
               src="/my pic.png"
               alt="Zoomed Screenshot"
