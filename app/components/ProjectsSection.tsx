@@ -77,7 +77,7 @@ function ProjectsSection() {
 
    {/* Example Project 3  */}
     
-    <div className="rounded-lg border border-gray-300 bg-white shadow-md p-4">
+    <div className="dark:bg-gray-100/10 rounded-lg border border-gray-300 bg-white shadow-md p-4">
      
       <video
       src={'https://xvtmkouugfhjglzaqfkp.supabase.co/storage/v1/object/public/mystorage//2025-07-03%2017-16-12.mkv'}
@@ -85,12 +85,12 @@ function ProjectsSection() {
       controls 
       muted
       
-      className="rounded-md mb-3 w-full h-40 object-cover"
+      className=" rounded-md mb-3 w-full h-40 object-cover"
       >
 
       </video>
       <h3 className="text-xl font-semibold text-purple-600">CyberLock Simulator: Teaching the Impact of Ransomware</h3>
-      <p className="text-gray-700 text-sm mt-1">
+      <p className="text-sm mt-1">
         <LucideMessageCircleWarning className='h-5 w-5 inline'/>This Project was build purely for educational purpose and tested in a controlled enviroment, The Developer will not be held responsible for any misuse of the video or code.   
       </p>
       <div className="flex gap-3 mt-3">
