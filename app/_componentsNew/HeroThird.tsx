@@ -3,14 +3,11 @@
 import React, { ReactNode, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { Github, Instagram, Linkedin, ShieldAlertIcon } from "lucide-react";
+import { Github, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
-import ZoomableImage from "../_componentsNew/ZomableImage";
 import CVModal from "../_componentsNew/CVModal";
 import { useDisclosure } from "@heroui/react";
 import ImageHero from "./ImageHero";
-import Terminal from "../components/Background/Terminal";
-import TerminalHero from "./TerminalHero";
 import HeroStats from "./HeroStats";
 
 function MyIntroAndImage() {
@@ -55,20 +52,20 @@ function MyIntroAndImage() {
 
       <div className="relative transition-colors duration-500">
         {/* ================= BACKGROUND ================= */}
-        <div className="absolute inset-0 -z-30  transition-colors duration-500 " />
+        <div className="absolute inset-0 -z-3  transition-colors duration-500 " />
 
         {/* Cyber grid only in dark */}
-        <div className="absolute inset-0 -z-20 opacity-0 dark:opacity-20 transition-opacity duration-500 bg-[linear-gradient(to_right,#00ffcc22_1px,transparent_1px),linear-gradient(to_bottom,#00ffcc22_1px,transparent_1px)] bg-[size:40px_40px] " />
+        <div className="absolute inset-0 -z-2 opacity-0 dark:opacity-20 transition-opacity duration-500 bg-[linear-gradient(to_right,#00ffcc22_1px,transparent_1px),linear-gradient(to_bottom,#00ffcc22_1px,transparent_1px)] bg-[size:40px_40px] " />
 
         {/* Subtle radial glow */}
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,170,0.15),transparent_60%)] dark:opacity-100 opacity-0 transition-opacity duration-500" />
+        <div className="absolute inset-0 -z-1 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,170,0.15),transparent_60%)] dark:opacity-100 opacity-0 transition-opacity duration-500" />
 
-        <div className="relative grid sm:grid-cols-1 md:grid-cols-2 items-center w-full max-w-screen-xl  gap-6 px-6 py-20 md:p-4 ">
+        <div className="relative grid sm:grid-cols-1 md:grid-cols-2 items-center w-full max-w-screen-lg  gap-6 px-0 py-2 md:p-4 ">
           {/* ================= IMAGE SECTION ================= */}
 
           <ImageHero />
 
-          {/* ================= TERMINAL SECTION ================= */}
+          {/* ================= Introduction SECTION ================= */}
           <div className="relative">
             <div className="flex flex-col justify-center ">
               <motion.div
@@ -80,7 +77,7 @@ function MyIntroAndImage() {
 
               <div
                 className="border border-gray-200 dark:border-green-500/30 rounded-xl p-6 font-mono  shadow-lg dark:shadow-[0_0_40px_rgba(0,255,0,0.15)]
-             transition-colors duration-500 mt-5 dark:bg-black/15 bg-zinc-100/15  backdrop-blur-sm"
+             transition-colors duration-500 mt-5 dark:bg-black/15 bg-zinc-100/15  backdrop-blur-sm m-0 "
               >
                 <p className="text-green-600 dark:text-green-400 text-sm mb-2">
                   root@aizaz:~$ ./introduce.sh
@@ -213,7 +210,7 @@ function MyIntroAndImage() {
       absolute inset-0
       rounded-full
       border border-cyan-400/30
-      bg-white/60 dark:bg-black/60
+      
       backdrop-blur-xl
       shadow-inner
     "

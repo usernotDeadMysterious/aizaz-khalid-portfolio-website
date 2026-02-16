@@ -43,11 +43,11 @@ function CertificatesSection() {
       className="relative mt-0 p-2 pt-0 w-full font-mono transition-colors duration-500"
     >
       {/* ================= BACKGROUND ================= */}
-      <div className="absolute inset-0 -z-30 bg-white dark:bg-black transition-colors duration-500" />
+      <div className="absolute inset-0 -z-3 backdrop-blur-lg transition-colors duration-500" />
 
       {/* subtle grid only in dark */}
       <div
-        className="absolute inset-0 -z-20 opacity-0 dark:opacity-20 transition-opacity duration-500
+        className="absolute inset-0 -z-2 opacity-0 dark:opacity-20 transition-opacity duration-500
         bg-[linear-gradient(to_right,#00ff0022_1px,transparent_1px),linear-gradient(to_bottom,#00ff0022_1px,transparent_1px)]
         bg-[size:40px_40px]"
       />
@@ -84,7 +84,7 @@ function CertificatesSection() {
       {/* ================= PANEL BODY ================= */}
       <div
         className="
-          rounded-b-xl p-6 space-y-8
+          rounded-b-xl p-2 space-y-4
           border
           
           border-zinc-300 dark:border-green-400/20

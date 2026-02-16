@@ -1,18 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { Eye, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function AboutMe() {
   return (
-    <div className="relative p-2 pt-0 space-y-12 w-full overflow-hidden transition-colors duration-500">
+    <div className="relative p-2 pt-0 space-y-7 w-full overflow-hidden transition-colors duration-500">
       {/* ================= BACKGROUND LAYERS ================= */}
 
       {/* Base */}
-      <div className="absolute inset-0 -z-40 bg-white dark:bg-black transition-colors duration-500" />
+      <div className="absolute inset-0 -z-40 transition-colors duration-500" />
 
       {/* Grid */}
       <div
@@ -22,7 +21,7 @@ function AboutMe() {
       />
 
       {/* Ambient Glow */}
-      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_30%_30%,rgba(0,255,170,0.15),transparent_50%)] dark:opacity-100 opacity-40 transition-opacity duration-500" />
+      <div className="" />
 
       {/* ================= TITLE ================= */}
       <h2 className="text-3xl font-bold font-mono text-cyan-600 dark:text-cyan-400 tracking-wider transition-colors">
@@ -35,8 +34,8 @@ function AboutMe() {
         relative space-y-10
         rounded-2xl
         border border-gray-300 dark:border-cyan-400/30
-        bg-white/70 dark:bg-black/60
-        backdrop-blur-xl
+        bg-white/70 dark:bg-black/30
+        backdrop-blur-md
         shadow-lg dark:shadow-[0_0_60px_rgba(0,255,170,0.15)]
         p-6
         transition-all duration-500

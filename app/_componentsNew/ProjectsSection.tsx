@@ -66,10 +66,10 @@ function ProjectsSection() {
   return (
     <div
       id="projects"
-      className="relative p-10 pt-0 space-y-14 w-full overflow-hidden"
+      className="relative p-1 pt-2 space-y-5 w-full overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 -z-30 bg-white dark:bg-black transition-colors duration-500" />
+      <div className="absolute inset-0 -z-30  transition-colors duration-500" />
 
       <div
         className="absolute inset-0 -z-20 opacity-10 dark:opacity-20

@@ -34,7 +34,7 @@ export default function Home() {
 
       <div className="relative min-h-screen w-full overflow-hidden">
         {/* Base background */}
-        <div className="fixed inset-0 -z-40 bg-gray-50 dark:bg-black transition-colors duration-500" />
+        <div className="fixed inset-0 z-1  transition-colors duration-500" />
 
         {/* Particles */}
         <div className="fixed inset-0 z-0 pointer-events-none">
@@ -42,10 +42,10 @@ export default function Home() {
         </div>
 
         {/* Optional cyber glow */}
-        <div className="fixed inset-0 -z-20 opacity-0 dark:opacity-100 transition-opacity duration-700 bg-[radial-gradient(circle_at_50%_20%,rgba(0,255,170,0.05),transparent_60%)]" />
+        <div className="fixed inset-0 z-2 opacity-0 dark:opacity-100 transition-opacity duration-700 bg-[radial-gradient(circle_at_50%_20%,rgba(0,255,170,0.05),transparent_60%)]" />
 
         {/* MAIN CONTENT */}
-        <div className="relative z-10 mx-auto max-w-6xl px-2 py-2">
+        <div className="relative z-3 mx-auto max-w-6xl px-2 py-2">
           <div
             className="
               rounded-2xl backdrop-blur-lg border border-gray-200 dark:border-cyan-400/20
@@ -57,6 +57,8 @@ export default function Home() {
           >
             {/* <DevBanner /> */}
             <HeroThird />
+          </div>
+          <div>
             <AboutMe />
             <SkillsSection />
             <ProjectsSection />
@@ -64,11 +66,9 @@ export default function Home() {
             <Contact />
             <FeedbackTwo />
             <Footer />
+            <ChatWidgetX />
           </div>
         </div>
-      </div>
-      <div className="fixed top-0 right-0 z-200">
-        <ChatWidgetX />
       </div>
     </>
   );

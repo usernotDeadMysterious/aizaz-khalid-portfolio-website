@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const ImageHero = () => {
   return (
     <>
-      <div className="relative flex items-center justify-center mb-5 mt-4  ">
+      <div className="relative flex items-center justify-center mb-5 mt-20 md:4 ">
         {/* Rotating Cyber Ring */}
         <motion.div
           animate={{ rotate: 360 }}

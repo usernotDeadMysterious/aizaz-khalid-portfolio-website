@@ -86,7 +86,7 @@ function SkillsSection() {
       className="relative p-10 pt-0 space-y-12 w-full overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 -z-30 bg-white dark:bg-black transition-colors duration-500" />
+      <div className="absolute inset-0 -z-30  transition-colors duration-500" />
 
       <div
         className="absolute inset-0 -z-20 opacity-10 dark:opacity-20
@@ -96,7 +96,7 @@ function SkillsSection() {
 
       {/* Title */}
       <h2 className="text-3xl font-bold font-mono text-cyan-600 dark:text-cyan-400 tracking-wider">
-        ./skills_and_expertise
+        ./Skills
       </h2>
 
       <div className="space-y-8">
