@@ -79,14 +79,8 @@ function MyIntroAndImage() {
               />
 
               <div
-                className="
-            
-            border border-gray-200 dark:border-green-500/30
-            rounded-xl p-6 font-mono
-            shadow-lg dark:shadow-[0_0_40px_rgba(0,255,0,0.15)]
-            backdrop-blur-sm
-            transition-colors duration-500 mt-5
-          "
+                className="border border-gray-200 dark:border-green-500/30 rounded-xl p-6 font-mono  shadow-lg dark:shadow-[0_0_40px_rgba(0,255,0,0.15)]
+             transition-colors duration-500 mt-5 dark:bg-black/15 bg-zinc-100/15  backdrop-blur-sm"
               >
                 <p className="text-green-600 dark:text-green-400 text-sm mb-2">
                   root@aizaz:~$ ./introduce.sh
