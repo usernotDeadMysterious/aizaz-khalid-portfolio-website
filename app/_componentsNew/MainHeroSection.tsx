@@ -150,10 +150,11 @@ function MainHeroSection() {
                 )} */}
               </div>
             </div>
+            {/* =========================== Stats Section================= */}
             <HeroStats />
           </div>
         </div>
-        {/* =========================== Stats Section================= */}
+
         <div className="relative"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 justify-center">
           {/* ================= SOCIAL SECTION ================= */}
@@ -164,8 +165,8 @@ function MainHeroSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, type: "spring" }}
                 className="
-              relative flex flex-wrap items-center justify-center gap-10
-              px-10 py-4 rounded-2xl
+              relative grid grid-cols-3 items-center justify-center gap-5
+              px-4 py-2 rounded-2xl
               backdrop-blur-sm
               bg-gradient-to-r
               from-gray-100 via-white to-gray-100

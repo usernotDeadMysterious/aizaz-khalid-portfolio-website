@@ -1,13 +1,12 @@
 "use client";
 
 import Script from "next/script";
-import ParticleBackground from "./components/ParticleBackground";
+import ParticleBackground from "./components/Background/ParticleBackground";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import FeedbackTwo from "./components/FeedbackTwo";
 import SkillsSection from "./_componentsNew/SkillSection";
 import ProjectsSection from "./_componentsNew/ProjectsSection";
-import CertificatesSection from "./_componentsNew/CertificatesSection";
 import ChatWidgetX from "./(routes)/chat-v2/ChatWidgetX";
 import MainHeroSection from "./_componentsNew/MainHeroSection";
 import Certlogo from "./(routes)/aboutme/_comp/Certlogo";

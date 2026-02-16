@@ -35,9 +35,16 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  const desktopItems = ["Home", "Skills", "Projects", "Certifications"];
+  const desktopItems = [
+    "Home",
+    "About Me",
+    "Skills",
+    "Projects",
+    "Certifications",
+  ];
   const mobileItems = [
     "Home",
+    "About Me",
     "Skills",
     "Projects",
     "Certifications",
@@ -87,11 +94,15 @@ export default function App() {
                       href={
                         item === "Home"
                           ? "/"
-                          : item === "Skills"
-                            ? "#skills"
-                            : item === "Projects"
-                              ? "#projects"
-                              : "#certificates"
+                          : item === "About Me"
+                            ? "/aboutme"
+                            : item === "Skills"
+                              ? "#skills"
+                              : item === "Projects"
+                                ? "#projects"
+                                : item === "Certifications"
+                                  ? "/certifications"
+                                  : "certificates"
                       }
                       className="
                         relative
@@ -151,13 +162,15 @@ export default function App() {
                       href={
                         item === "Home"
                           ? "/"
-                          : item === "Skills"
-                            ? "#skills"
-                            : item === "Projects"
-                              ? "#projects"
-                              : item === "Certifications"
-                                ? "#certificates"
-                                : "#contact"
+                          : item === "About Me"
+                            ? "/aboutme"
+                            : item === "Skills"
+                              ? "#skills"
+                              : item === "Projects"
+                                ? "#projects"
+                                : item === "Certifications"
+                                  ? "/certifications"
+                                  : "#contact"
                       }
                       className="
                         block w-full
