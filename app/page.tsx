@@ -2,18 +2,15 @@
 
 import Script from "next/script";
 import ParticleBackground from "./components/ParticleBackground";
-
-import DevBanner from "./components/Banner";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import FeedbackTwo from "./components/FeedbackTwo";
-
-import HeroThird from "./_componentsNew/HeroThird";
-import AboutMe from "./_componentsNew/AboutMe";
 import SkillsSection from "./_componentsNew/SkillSection";
 import ProjectsSection from "./_componentsNew/ProjectsSection";
 import CertificatesSection from "./_componentsNew/CertificatesSection";
 import ChatWidgetX from "./(routes)/chat-v2/ChatWidgetX";
+import MainHeroSection from "./_componentsNew/MainHeroSection";
+import Certlogo from "./(routes)/aboutme/_comp/Certlogo";
 
 export default function Home() {
   return (
@@ -56,18 +53,16 @@ export default function Home() {
             "
           >
             {/* <DevBanner /> */}
-            <HeroThird />
-          </div>
-          <div>
-            <AboutMe />
+            <MainHeroSection />
+            <Certlogo />
             <SkillsSection />
             <ProjectsSection />
-            <CertificatesSection />
+            {/* <CertificatesSection /> */}
             <Contact />
             <FeedbackTwo />
             <Footer />
-            <ChatWidgetX />
           </div>
+          <ChatWidgetX />
         </div>
       </div>
     </>

@@ -123,7 +123,12 @@ function FeedbackTwo() {
                     transmission complete ✔
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form
+                    action="https://formspree.io/f/xeeonbpk"
+                    method="POST"
+                    // onSubmit={handleSubmit}
+                    className="space-y-6"
+                  >
                     {/* INPUT STYLE */}
                     {[
                       {

@@ -1,8 +1,6 @@
 "use client";
 
 import React, { FormEvent, useRef, useState } from "react";
-import emailjs from "emailjs-com";
-import { Input, Textarea, Button } from "@heroui/react";
 import clsx from "clsx";
 
 function ServiceMessage() {
@@ -18,64 +16,32 @@ function ServiceMessage() {
 
     if (!formRef.current) return;
 
-    setNotification({ message: "Sending message...", type: "loading" });
+    setNotification({ message: "processing...", type: "loading" });
 
     const formData = new FormData(formRef.current);
-    const formValues = Object.fromEntries(formData.entries());
-
-    console.log("Form values:", formValues);
 
     try {
-      const response = await fetch("/api/service-request", {
+      const response = await fetch("https://formspree.io/f/xeeonbpk", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formValues),
+        body: formData,
+        headers: { Accept: "application/json" },
       });
 
-      let result: any = {};
-
-      try {
-        if (
-          response.headers.get("content-type")?.includes("application/json")
-        ) {
-          result = await response.json();
-        } else {
-          console.warn("Response is not JSON");
-        }
-      } catch (jsonError) {
-        console.error("Failed to parse JSON:", jsonError);
-      }
-
       if (response.ok) {
-        // EmailJS sending
-        const serviceID = "service_ketgxai";
-        const userID = "d38KTQtxALNSXYUpc";
-
-        await emailjs.sendForm(
-          serviceID,
-          "template_vhaphln",
-          formRef.current,
-          userID
-        );
-        await emailjs.sendForm(
-          serviceID,
-          "template_nfbipph",
-          formRef.current,
-          userID
-        );
-
-        setNotification({ message: "Service Request Sent!", type: "success" });
+        setNotification({
+          message: "request logged successfully ✔",
+          type: "success",
+        });
         formRef.current.reset();
       } else {
         setNotification({
-          message: result.error || "Something went wrong",
+          message: "transmission failed",
           type: "error",
         });
       }
-    } catch (error) {
-      console.error("Error submitting form:", error);
+    } catch {
       setNotification({
-        message: "Failed to submit service request",
+        message: "network error",
         type: "error",
       });
     }
@@ -84,55 +50,78 @@ function ServiceMessage() {
   };
 
   return (
-    <div className="p-2 pt-0 space-y-4 w-full">
-      <h2 className="text-xl font-bold">Service Inquiry</h2>
+    <div className="space-y-6 font-mono text-sm">
+      <p className="text-green-400">$ initiate --service_request</p>
 
       {notification && (
         <div
           className={clsx(
-            "px-4 py-2 rounded-md text-sm font-medium transition-all",
+            "px-4 py-2 border rounded-md text-xs",
             notification.type === "success"
-              ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+              ? "border-green-400/40 text-green-400 bg-green-400/10"
               : notification.type === "error"
-              ? "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200"
-              : "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200"
+                ? "border-red-400/40 text-red-400 bg-red-400/10"
+                : "border-yellow-400/40 text-yellow-400 bg-yellow-400/10",
           )}
         >
           {notification.message}
         </div>
       )}
 
-      <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-        <Input name="name" type="text" placeholder="Your Name" required />
-        <Input name="email" type="email" placeholder="Your Email" required />
+      <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
+        <div>
+          <label className="block text-green-400 mb-1">user.name:</label>
+          <input
+            name="name"
+            required
+            className="w-full bg-black/60 border border-green-400/30 px-3 py-2 text-green-300 focus:outline-none focus:border-green-400 focus:shadow-[0_0_10px_rgba(0,255,0,0.4)]"
+          />
+        </div>
 
-        <select
-          name="service"
-          title="Select Service"
-          required
-          className="border rounded-md p-2 w-full dark:bg-zinc-900 dark:border-zinc-700"
-        >
-          <option value="">Select Service</option>
-          <option value="Cyber Security">Cyber Security</option>
-          <option value="Web Development">Web Development</option>
-          <option value="SEO">SEO</option>
-          <option value="Other">Other</option>
-        </select>
+        <div>
+          <label className="block text-green-400 mb-1">user.email:</label>
+          <input
+            type="email"
+            name="email"
+            required
+            className="w-full bg-black/60 border border-green-400/30 px-3 py-2 text-green-300 focus:outline-none focus:border-green-400 focus:shadow-[0_0_10px_rgba(0,255,0,0.4)]"
+          />
+        </div>
 
-        <Textarea
-          name="message"
-          placeholder="Describe your needs..."
-          required
-        />
+        <div>
+          <label className="block text-green-400 mb-1">service.type:</label>
+          <select
+            name="service"
+            required
+            className="w-full bg-black/60 border border-green-400/30 px-3 py-2 text-green-300 focus:outline-none focus:border-green-400"
+          >
+            <option value="">-- select module --</option>
+            <option value="Cyber Security">Cyber Security</option>
+            <option value="Web Development">Web Development</option>
+            <option value="SEO">SEO</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
 
-        <Button
+        <div>
+          <label className="block text-green-400 mb-1">message.payload:</label>
+          <textarea
+            name="message"
+            required
+            rows={4}
+            className="w-full bg-black/60 border border-green-400/30 px-3 py-2 text-green-300 resize-none focus:outline-none focus:border-green-400 focus:shadow-[0_0_10px_rgba(0,255,0,0.4)]"
+          />
+        </div>
+
+        <button
           type="submit"
-          color="danger"
-          variant="solid"
           disabled={notification?.type === "loading"}
+          className="px-6 py-2 border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all shadow-[0_0_15px_rgba(0,255,0,0.4)]"
         >
-          {notification?.type === "loading" ? "Sending..." : "Send Message"}
-        </Button>
+          {notification?.type === "loading"
+            ? "processing..."
+            : "execute --send_request"}
+        </button>
       </form>
     </div>
   );

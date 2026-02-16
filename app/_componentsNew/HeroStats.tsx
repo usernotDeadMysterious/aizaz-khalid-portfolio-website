@@ -5,15 +5,15 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 
 const stats = [
-  { label: "Projects_completed", value: 100, suffix: "+" },
-  { label: "Clients_served", value: 20, suffix: "+" },
-  { label: "Years_experience", value: 2, suffix: "+" },
+  { label: "Projects completed", value: 100, suffix: "+" },
+  { label: "Clients", value: 20, suffix: "+" },
+  { label: "Experience (Years)", value: 2, suffix: "+" },
   { label: "Certifications", value: 40, suffix: "+" },
 ];
 
 function HeroStats() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-5 mb-5">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-5 mb-5">
       {stats.map((stat, index) => (
         <motion.div
           key={index}
@@ -34,7 +34,7 @@ function HeroStats() {
             border-zinc-300
             text-zinc-800
 
-            dark:bg-black/80
+            dark:bg-black/30
             dark:border-green-400/20
             dark:text-green-400
             dark:shadow-[0_0_25px_rgba(0,255,0,0.05)]
@@ -43,13 +43,16 @@ function HeroStats() {
             hover:border-zinc-500
             dark:hover:border-green-400
             dark:hover:shadow-[0_0_40px_rgba(0,255,0,0.3)]
+            items-center
+            flex flex-col
+             py-6
           "
         >
           {/* Terminal Prefix */}
-          <p className="text-xs font-mono opacity-60 mb-2">{stat.label}</p>
+          <p className="text-xs font-mono opacity-60 mb-2 ">{stat.label}</p>
 
           {/* Animated Number */}
-          <h3 className="text-3xl md:text-4xl font-bold font-mono">
+          <p className="text-lg md:text-xl font-bold font-mono">
             <CountUp
               end={stat.value}
               duration={2}
@@ -57,7 +60,7 @@ function HeroStats() {
               scrollSpyOnce
             />
             {stat.suffix}
-          </h3>
+          </p>
 
           {/* Glow Overlay */}
           <div

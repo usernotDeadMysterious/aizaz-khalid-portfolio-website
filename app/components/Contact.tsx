@@ -4,7 +4,6 @@ import { Button } from "@heroui/react";
 import { Disclosure, Transition } from "@headlessui/react";
 import { Mail, MessageSquare, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
-import React from "react";
 import ServiceMessage from "./ServiceMessage";
 
 function Contact() {

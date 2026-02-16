@@ -55,7 +55,7 @@ function CertificatesSection() {
       {/* ================= TERMINAL HEADER ================= */}
       <div
         className="
-        px-4 py-3 flex flex-col justify-center items-center rounded-t-xl
+        px-2 py-1 flex flex-col justify-center items-center rounded-t-xl
         border 
         bg-zinc-100 dark:bg-black
         border-zinc-300 dark:border-green-400/30
@@ -63,7 +63,7 @@ function CertificatesSection() {
         transition-colors duration-500
       "
       >
-        <span className="text-zinc-500 text-sm  dark:text-green-500 animate-pulse">
+        <span className="text-zinc-500 text-[10px]  dark:text-green-500 animate-pulse">
           ● CERTIFICATION DATABASE CONNECTED
         </span>
       </div>
@@ -94,18 +94,18 @@ function CertificatesSection() {
       >
         {/* Section Info */}
         <div className="space-y-2">
-          <h2 className="text-2xl text-zinc-800 dark:text-green-400 transition-colors duration-500">
+          <h2 className="text-lg text-zinc-800 dark:text-green-400 transition-colors duration-500 mb-4">
             ./certifications
           </h2>
 
-          <p className="text-sm text-zinc-600 dark:text-green-500/70">
+          <p className="text-xs text-zinc-600 dark:text-green-500/70">
             select module to load credentials{" "}
             <ArrowDownCircle className="inline h-4 w-4" />
           </p>
         </div>
 
         {/* ================= COMMAND TABS ================= */}
-        <div className="flex flex-wrap gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 ">
           {tabs.map((tab) => {
             const isActive = activeTab === tab.key;
 
@@ -114,7 +114,7 @@ function CertificatesSection() {
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
                 className={`
-                  px-4 py-2 rounded-lg border transition-all duration-300
+                  px-2 py-0.5  text-xs rounded-lg border transition-all duration-300 
                   ${
                     isActive
                       ? `

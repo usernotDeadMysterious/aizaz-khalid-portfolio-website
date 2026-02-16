@@ -10,7 +10,7 @@ import { useDisclosure } from "@heroui/react";
 import ImageHero from "./ImageHero";
 import HeroStats from "./HeroStats";
 
-function MyIntroAndImage() {
+function MainHeroSection() {
   const [booted, setBooted] = useState(false);
 
   const [showH2, setShowH2] = useState(false);
@@ -79,17 +79,17 @@ function MyIntroAndImage() {
                 className="border border-gray-200 dark:border-green-500/30 rounded-xl p-6 font-mono  shadow-lg dark:shadow-[0_0_40px_rgba(0,255,0,0.15)]
              transition-colors duration-500 mt-5 dark:bg-black/15 bg-zinc-100/15  backdrop-blur-sm m-0 "
               >
-                <p className="text-green-600 dark:text-green-400 text-sm mb-2">
-                  root@aizaz:~$ ./introduce.sh
+                <p className="text-green-600 dark:text-green-400 text-xs mb-2">
+                  root@Introduct!on.sh:~$ ./
                 </p>
 
-                <p className="text-xs text-green-500 flex items-center gap-2 mb-3">
+                <p className="text-[10px] text-green-500 flex items-center gap-2 mb-3">
                   <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                  system online • firewall active
+                  system online & firewall active
                 </p>
 
                 <motion.h1
-                  className="text-4xl font-bold text-gray-900 dark:text-cyan-400"
+                  className="text-3xl font-bold text-gray-900 dark:text-cyan-400"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1 }}
@@ -99,7 +99,7 @@ function MyIntroAndImage() {
                     transition={{ repeat: Infinity, duration: 3 }}
                   >
                     <Typewriter
-                      words={["Hi, I'm Aizaz Khalid"]}
+                      words={["Aizaz Khalid"]}
                       cursor
                       cursorStyle="█"
                       typeSpeed={70}
@@ -109,16 +109,16 @@ function MyIntroAndImage() {
 
                 {showH2 && (
                   <motion.h2
-                    className="text-xl mt-4 text-blue-600 dark:text-blue-400"
+                    className="text-md mt-4 text-blue-600 dark:text-blue-400"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                   >
                     <Typewriter
                       words={[
-                        "Full Stack Engineer",
-                        "Cybersecurity Analyst | SOC L1",
-                        "Ethical Hacker & AI Explorer",
+                        "Full Stack Software Engineer",
+                        "Cybersecurity Analyst & Researcher",
+                        "Interesed in Ethical Hacking & AI ",
                       ]}
                       loop={0}
                       cursor
@@ -130,7 +130,7 @@ function MyIntroAndImage() {
                   </motion.h2>
                 )}
 
-                {showP && (
+                {/* {showP && (
                   <motion.p
                     className="
                   text-gray-700 dark:text-gray-300
@@ -147,15 +147,14 @@ function MyIntroAndImage() {
                     and secure full-stack application development. Building
                     scalable, secure, production-grade systems.
                   </motion.p>
-                )}
+                )} */}
               </div>
             </div>
+            <HeroStats />
           </div>
         </div>
-        {/* ================= Stats Section================= */}
-        <div className="relative">
-          <HeroStats />
-        </div>
+        {/* =========================== Stats Section================= */}
+        <div className="relative"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 justify-center">
           {/* ================= SOCIAL SECTION ================= */}
           {showSocial && (
@@ -315,4 +314,4 @@ function CyberIcon({ href, icon, label, color = "cyan" }: CyberIconProps) {
   );
 }
 
-export default MyIntroAndImage;
+export default MainHeroSection;
