@@ -13,7 +13,6 @@ import AboutMe from "./_componentsNew/AboutMe";
 import SkillsSection from "./_componentsNew/SkillSection";
 import ProjectsSection from "./_componentsNew/ProjectsSection";
 import CertificatesSection from "./_componentsNew/CertificatesSection";
-import ChatWidget from "./components/ChatWidget";
 import ChatWidgetX from "./(routes)/chat-v2/ChatWidgetX";
 
 export default function Home() {
@@ -49,17 +48,14 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-6xl px-2 py-2">
           <div
             className="
-              rounded-2xl
-              
-              backdrop-blur-sm
-              border border-gray-200 dark:border-cyan-400/20
+              rounded-2xl backdrop-blur-lg border border-gray-200 dark:border-cyan-400/20
               shadow-xl dark:shadow-[0_0_60px_rgba(0,255,170,0.06)]
               p-4 md:p-6
               space-y-12
               transition-all duration-500
             "
           >
-            <DevBanner />
+            {/* <DevBanner /> */}
             <HeroThird />
             <AboutMe />
             <SkillsSection />

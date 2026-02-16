@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 const ImageHero = () => {
   return (
     <>
-      <div className="relative flex items-center justify-center mb-5 mt-4">
+      <div className="relative flex items-center justify-center mb-5 mt-4  ">
         {/* Rotating Cyber Ring */}
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 14, ease: "linear" }}
-          className="absolute w-[320px] h-[320px] rounded-full border-2 border-dashed border-cyan-400/40 dark:border-cyan-400/50"
+          className="absolute w-[320px] h-[320px] rounded-full border-2 border-dashed border-cyan-400/40 dark:border-cyan-400/50 "
         />
 
         {/* Image Container */}

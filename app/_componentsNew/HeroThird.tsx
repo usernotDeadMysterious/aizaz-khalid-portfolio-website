@@ -47,7 +47,7 @@ function MyIntroAndImage() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           onAnimationComplete={() => setBooted(true)}
-          className="absolute inset-0 z-50 bg-black flex items-center justify-center font-mono text-green-400 text-sm"
+          className="absolute inset-0 z-50 bg-black flex items-center justify-center font-mono text-green-400 text-sm "
         >
           booting security kernel...
         </motion.div>
@@ -55,22 +55,22 @@ function MyIntroAndImage() {
 
       <div className="relative transition-colors duration-500">
         {/* ================= BACKGROUND ================= */}
-        <div className="absolute inset-0 -z-30  transition-colors duration-500" />
+        <div className="absolute inset-0 -z-30  transition-colors duration-500 " />
 
         {/* Cyber grid only in dark */}
-        <div className="absolute inset-0 -z-20 opacity-0 dark:opacity-20 transition-opacity duration-500 bg-[linear-gradient(to_right,#00ffcc22_1px,transparent_1px),linear-gradient(to_bottom,#00ffcc22_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="absolute inset-0 -z-20 opacity-0 dark:opacity-20 transition-opacity duration-500 bg-[linear-gradient(to_right,#00ffcc22_1px,transparent_1px),linear-gradient(to_bottom,#00ffcc22_1px,transparent_1px)] bg-[size:40px_40px] " />
 
         {/* Subtle radial glow */}
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,170,0.15),transparent_60%)] dark:opacity-100 opacity-0 transition-opacity duration-500" />
 
-        <div className="relative grid sm:grid-cols-1 md:grid-cols-2 items-center w-full max-w-screen-xl  gap-6 px-6 py-20 md:p-4">
+        <div className="relative grid sm:grid-cols-1 md:grid-cols-2 items-center w-full max-w-screen-xl  gap-6 px-6 py-20 md:p-4 ">
           {/* ================= IMAGE SECTION ================= */}
 
           <ImageHero />
 
           {/* ================= TERMINAL SECTION ================= */}
           <div className="relative">
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center ">
               <motion.div
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}

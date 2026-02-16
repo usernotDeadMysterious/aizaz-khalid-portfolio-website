@@ -112,24 +112,24 @@ export default function ChatWidgetX() {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
-              className="absolute inset-0 rounded-full border-2 border-red-500/40"
+              className="absolute inset-0 rounded-full border-3 border-red-600/40"
             />
 
             {/* Reverse Ring */}
             <motion.div
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
-              className="absolute inset-3 rounded-full border border-red-400/30"
+              className="absolute inset-3 rounded-full border-2 border-red-400/30"
             />
 
             {/* Core */}
             <div
               className="absolute inset-6 rounded-full 
-        bg-gradient-to-br from-red-400 to-emerald-600
-        shadow-[0_0_50px_rgba(0,255,128,0.7)]
+        bg-gradient-to-br from-green-400 to-emerald-600
+        shadow-[0_0_60px_rgba(0,255,128,0.7)]
         flex items-center justify-center "
             >
-              <span className="absolute w-full h-full rounded-full bg-green-400/20 animate-ping"></span>
+              <span className="absolute w-full h-full rounded-full bg-green-400 animate-ping"></span>
 
               <span className="relative text-black font-bold text-xl tracking-widest">
                 <Shield />
@@ -148,11 +148,18 @@ export default function ChatWidgetX() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-6 right-6 w-96 h-[500px]
-            rounded-2xl bg-black/95 backdrop-blur-lg
-            border border-green-500/40
-            shadow-[0_0_60px_rgba(0,255,128,0.4)]
-            flex flex-col overflow-hidden"
+            className="
+  fixed
+  w-[90vw] max-w-md h-[80dvh] md:h-[500px]
+
+  bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2
+  md:bottom-6 md:right-6 md:translate-x-0 md:translate-y-0
+
+  rounded-2xl bg-black/75 backdrop-blur-lg
+  border border-green-500/40
+  shadow-[0_0_60px_rgba(0,255,128,0.4)]
+  flex flex-col overflow-hidden
+"
           >
             {/* Header */}
             <div
