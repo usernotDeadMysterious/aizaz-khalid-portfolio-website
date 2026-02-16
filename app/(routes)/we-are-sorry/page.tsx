@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-
-import ParticleBackground from '@/app/components/ParticleBackground';
-import React, { useEffect } from 'react'
-
+import CyberBackground from "@/app/components/Background/CyberBackground";
+import CyberSecurityBackground from "@/app/components/Background/CyberSecurityBackground";
+import Terminal from "@/app/components/Background/Terminal";
+import SOCPanel from "@/app/components/Background/SOCPanel";
+import React, { useEffect } from "react";
 
 function page() {
-
   useEffect(() => {
-      console.log('Page Rendered');
-    }, []);
+    console.log("Page Rendered");
+  }, []);
   return (
     <>
-     
-    <ParticleBackground />
-      <h1>Particles Test Page</h1>
-  
+      {/* <CyberSecurityBackground /> */}
+      <CyberSecurityBackground />
+      <Terminal />
+      <SOCPanel />
     </>
-  )
+  );
 }
 
-export default page
+export default page;

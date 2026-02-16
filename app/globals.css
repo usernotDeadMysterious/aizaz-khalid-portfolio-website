@@ -149,3 +149,63 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+
+
+
+
+/* terminal background */
+
+.terminal {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 420px;
+  height: 180px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #00ff88;
+  font-family: monospace;
+  font-size: 13px;
+  color: #00ff88;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.soc {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 280px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #00aaff;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.soc-title {
+  color: #00aaff;
+  margin-bottom: 6px;
+}
+
+.alert.info {
+  color: #00ffaa;
+}
+.alert.warn {
+  color: #ffaa00;
+}
+.alert.critical {
+  color: #ff4444;
+}
+
+
+
+
+/* canvas {
+  pointer-events: none;
+} */
+
+nav {
+  position: relative;
+  z-index: 50;
+}

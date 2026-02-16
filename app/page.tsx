@@ -1,24 +1,24 @@
 "use client";
-import { Button, ButtonGroup } from "@heroui/react";
-import MyIntroAndImage from "./components/MyIntroAndImage";
+
+import Script from "next/script";
 import ParticleBackground from "./components/ParticleBackground";
-import AboutMe from "./components/AboutMe";
-import SkillsSection from "./components/SkillsSection";
-import ProjectsSection from "./components/ProjectsSection";
+
 import DevBanner from "./components/Banner";
 import Footer from "./components/Footer";
-import CertificatesSection from "./components/CertificatesSection";
 import Contact from "./components/Contact";
-import Feedback from './components/Feeback'
 import FeedbackTwo from "./components/FeedbackTwo";
-import Script from "next/script";
-import ChatWidget from "./components/ChatWidget";
 
+import HeroThird from "./_componentsNew/HeroThird";
+import AboutMe from "./_componentsNew/AboutMe";
+import SkillsSection from "./_componentsNew/SkillSection";
+import ProjectsSection from "./_componentsNew/ProjectsSection";
+import CertificatesSection from "./_componentsNew/CertificatesSection";
+import ChatWidget from "./components/ChatWidget";
+import ChatWidgetX from "./(routes)/chat-v2/ChatWidgetX";
 
 export default function Home() {
   return (
     <>
-    {/* Google Analytics Script */}
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-6BXRP55Z4E"
@@ -32,32 +32,47 @@ export default function Home() {
           gtag('config', 'G-6BXRP55Z4E');
         `}
       </Script>
-      <div className="relative h-full w-full">
-        {/* Background animation */}
-        <div className="absolute inset-0 z-[0]">
+
+      <div className="relative min-h-screen w-full overflow-hidden">
+        {/* Base background */}
+        <div className="fixed inset-0 -z-40 bg-gray-50 dark:bg-black transition-colors duration-500" />
+
+        {/* Particles */}
+        <div className="fixed inset-0 z-0 pointer-events-none">
           <ParticleBackground />
         </div>
 
-        {/* Content Container with Glass Effect */}
-        <div className="relative z-10 mx-auto max-w-7xl  ">
-          <div className="rounded-2xl bg-white/10 dark:bg-black/5 backdrop-blur-xs shadow-lg p-2 md:p-3 space-y-6">
-            {/* <AnimationNav/> */}
-            <DevBanner />
+        {/* Optional cyber glow */}
+        <div className="fixed inset-0 -z-20 opacity-0 dark:opacity-100 transition-opacity duration-700 bg-[radial-gradient(circle_at_50%_20%,rgba(0,255,170,0.05),transparent_60%)]" />
 
-            <MyIntroAndImage />
-            
+        {/* MAIN CONTENT */}
+        <div className="relative z-10 mx-auto max-w-6xl px-2 py-2">
+          <div
+            className="
+              rounded-2xl
+              
+              backdrop-blur-sm
+              border border-gray-200 dark:border-cyan-400/20
+              shadow-xl dark:shadow-[0_0_60px_rgba(0,255,170,0.06)]
+              p-4 md:p-6
+              space-y-12
+              transition-all duration-500
+            "
+          >
+            <DevBanner />
+            <HeroThird />
             <AboutMe />
             <SkillsSection />
             <ProjectsSection />
             <CertificatesSection />
-            <Contact/>
-            
-            <FeedbackTwo/>
-            
-            {/* <ChatWidget/> */}
-            <Footer/>
+            <Contact />
+            <FeedbackTwo />
+            <Footer />
           </div>
         </div>
+      </div>
+      <div className="fixed top-0 right-0 z-200">
+        <ChatWidgetX />
       </div>
     </>
   );

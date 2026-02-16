@@ -13,9 +13,7 @@ function MyIntroAndImage() {
   const [showP, setShowP] = useState(false);
   const [showSocial, setShowSocial] = useState(false);
 
-function viewCV(){
-
-}
+  function viewCV() {}
 
   useEffect(() => {
     // Timing based on typing speed * length of h1 text
@@ -108,8 +106,9 @@ function viewCV(){
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            Computer Science Graduate from  University of Agriculture Peshawar. Cyber Security Analyst ~ SOC L1 ~ 
-            Full Stack Software Engineer - Meta
+            Computer Science Graduate from University of Agriculture Peshawar.
+            Cyber Security Analyst ~ SOC L1 ~ Full Stack Software Engineer -
+            Meta
           </motion.p>
         )}
 
@@ -149,13 +148,14 @@ function viewCV(){
                 <h6 className="text-xs hover:text-blue-900">LinkedIn</h6>
               </div>
             </Link>
-            <div 
-            onClick={viewCV}
-            className="flex flex-col items-center justify-center hover:border-1  rounded-lg p-2">
-                {/* <Download className="w-6 h-7 text-black dark:text-white" /> */}
-                
-                <CVModal  />
-              </div>
+            <div
+              onClick={viewCV}
+              className="flex flex-col items-center justify-center hover:border-1  rounded-lg p-2"
+            >
+              {/* <Download className="w-6 h-7 text-black dark:text-white" /> */}
+
+              <CVModal />
+            </div>
           </motion.div>
         )}
       </div>
