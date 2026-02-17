@@ -21,7 +21,7 @@ const LazyLoadImage = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Image
-            src="/my%20pic.png" // or "/my-pic.png" if renamed
+            src="/profileimg/my-img.jpg"
             alt="Aizaz Khalid Profile Image, Close-up click"
             width={600}
             height={400}

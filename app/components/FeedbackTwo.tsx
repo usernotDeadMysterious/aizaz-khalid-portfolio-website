@@ -20,7 +20,7 @@ function FeedbackTwo() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const res = await fetch("/api/feedbackextended", {
+    const res = await fetch("/_api/feedbackextended", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -35,6 +35,33 @@ function FeedbackTwo() {
     });
 
     if (res.ok) setSubmitted(true);
+  };
+  const handleSubmitformspree = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const res = await fetch("https://formspree.io/f/xeeonbpk", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        feedback,
+        overallRating,
+        devRating,
+        designRating,
+        bugExperience,
+      }),
+    });
+
+    if (res.ok) {
+      setSubmitted(true);
+    } else {
+      console.error("Form submission failed");
+    }
+    handleSubmit(e);
   };
 
   return (
@@ -123,12 +150,7 @@ function FeedbackTwo() {
                     transmission complete ✔
                   </div>
                 ) : (
-                  <form
-                    action="https://formspree.io/f/xeeonbpk"
-                    method="POST"
-                    // onSubmit={handleSubmit}
-                    className="space-y-6"
-                  >
+                  <form onSubmit={handleSubmitformspree} className="space-y-6">
                     {/* INPUT STYLE */}
                     {[
                       {

@@ -23,9 +23,9 @@ function SkillsSection() {
       title: "Frontend",
       accent: "blue",
       skills: [
-        "HTML5 • CSS3 • JavaScript",
         "React.js • Next.js",
-        "Tailwind • ShadCN • Hero UI",
+        "Tailwind CSS",
+        "ShadCN • Hero UI",
         "Responsive UI/UX",
       ],
     },
@@ -33,11 +33,12 @@ function SkillsSection() {
       title: "Backend & Databases",
       accent: "purple",
       skills: [
+        "Express, Node JS",
         "MySQL • PostgreSQL",
         "MongoDB",
-        "Python Backend Logic",
+        "Django (Python)",
         "Supabase",
-        "Learning Django & APIs",
+        "Rest APIs",
       ],
     },
     {

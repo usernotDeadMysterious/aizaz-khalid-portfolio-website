@@ -129,25 +129,6 @@ function MainHeroSection() {
                     />
                   </motion.h2>
                 )}
-
-                {/* {showP && (
-                  <motion.p
-                    className="
-                  text-gray-700 dark:text-gray-300
-                  mt-6 leading-relaxed
-                  border-l-2 border-cyan-500 dark:border-cyan-400
-                  pl-4
-                "
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                  >
-                    Computer Science Graduate. Security Operations Center (SOC
-                    L1) analyst focused on threat monitoring, incident response,
-                    and secure full-stack application development. Building
-                    scalable, secure, production-grade systems.
-                  </motion.p>
-                )} */}
               </div>
             </div>
             {/* =========================== Stats Section================= */}

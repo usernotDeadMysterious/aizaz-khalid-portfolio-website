@@ -18,7 +18,7 @@ export default function ZoomableImage() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 ">
           <Dialog.Panel className="relative max-w-4xl w-full p-4 items-center flex justify-center transition-transform duration-300 ease-out scale-100 opacity-100 ">
             <Image
-              src="/my%20pic.png"
+              src="/profileimg/my-img.jpg"
               alt="Zoomed Screenshot"
               width={500}
               height={0}
